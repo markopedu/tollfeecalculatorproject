@@ -148,7 +148,7 @@ namespace TollFeeCalculatorTest
         public void TestGetTollFeeSaturday()
         {
             var date = TestHelper.GetSaturday();
-            var fee = _tollCalculator.GetTollFee(date, new Motorbike());
+            var fee = _tollCalculator.GetTollFee(date, new Car());
             Assert.Equal(expected: 0, actual:fee);
         }
         
@@ -156,7 +156,7 @@ namespace TollFeeCalculatorTest
         public void TestGetTollFeeSunday()
         {
             var date = TestHelper.GetSunday();
-            var fee = _tollCalculator.GetTollFee(date, new Motorbike());
+            var fee = _tollCalculator.GetTollFee(date, new Car());
             Assert.Equal(expected: 0, actual:fee);
         }
         
